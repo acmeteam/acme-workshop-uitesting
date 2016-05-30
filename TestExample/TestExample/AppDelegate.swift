@@ -8,6 +8,15 @@
 
 import UIKit
 
+
+private func UITesting() -> Bool {
+    return NSProcessInfo.processInfo().arguments.contains("UI-TESTING")
+}
+private func MasterListData() -> String? {
+    return NSProcessInfo.processInfo().environment["http://plantronics.com/api/masterlist.json"]
+}
+
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -15,7 +24,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+
+        
+        print( "Are we UI unit testing \(UITesting())")
+        print( "Get UI Mock json \(MasterListData())")
+
+        // TODO: print in console NSProcessInfo.processInfo().arguments , NSProcessInfo.processInfo().environment
         return true
     }
 
