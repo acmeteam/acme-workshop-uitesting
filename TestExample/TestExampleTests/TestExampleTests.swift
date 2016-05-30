@@ -22,8 +22,33 @@ class TestExampleTests: XCTestCase {
     }
     
     func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        let nilVariable:String? = nil
+        let notNilVariable:String? = "This is something"
+        let trueBool:Bool = true
+        let falseBool:Bool = false
+        
+        XCTAssert(1+1==2)
+        XCTAssert(1+1==2, "Something is wrong with math")
+        
+        XCTAssertNil(nilVariable)
+        XCTAssertNil(nilVariable, "This variable must be nil")
+        
+        XCTAssertTrue(trueBool)
+        XCTAssertTrue(trueBool, "This expression must be true")
+        
+        XCTAssertFalse(falseBool)
+        XCTAssertFalse(falseBool, "This expression must be false")
+        
+        XCTAssertNotNil(notNilVariable)
+        XCTAssertNotNil(notNilVariable, "This variable have value")
+        
+        XCTAssertEqual(3+2, 4+1)
+        XCTAssertLessThan(3, 4)
+        XCTAssertNotEqual(3, 4)
+        XCTAssertGreaterThan(5, 4)
+       // XCTAssertThrowsError(expression: T, message: String, errorHandler: (error: ErrorType) -> Void)
+       // XCTFail("Force failure") 
+        
     }
     
     func testPerformanceExample() {
