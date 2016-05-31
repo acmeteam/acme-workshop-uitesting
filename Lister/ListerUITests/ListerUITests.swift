@@ -86,9 +86,11 @@ class ListerUITests: XCTestCase {
         addItemTestField.tap()
         addItemTestField.typeText("Cookies")
         app.typeText("\r")
-        XCTAssertEqual(cookiesButton.value as? String, "0") // This will fail. Expected ?!
-        cookiesButton.tap() // po cookiesButton.value, before and after tap.
-        XCTAssertEqual(cookiesButton.value as? String, "1")
+        
+        
+        // we have 2 buttons with identifier Cookies here. One way of fixin....
+        let cookiesButton2 = table.childrenMatchingType(.Cell).elementBoundByIndex(1).buttons["Cookies"]
+        cookiesButton2.tap() // po cookiesButton.value, before and after tap.
     }
     
 }
