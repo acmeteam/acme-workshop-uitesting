@@ -14,6 +14,12 @@
 		176E86FE1CFCF29200C94849 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 176E86FC1CFCF29200C94849 /* LaunchScreen.storyboard */; };
 		176E87091CFCF29200C94849 /* TestExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176E87081CFCF29200C94849 /* TestExampleTests.swift */; };
 		176E87141CFCF29200C94849 /* TestExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176E87131CFCF29200C94849 /* TestExampleUITests.swift */; };
+		178B7DD91CFCFFEE0004C148 /* PSTSpashScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178B7DD81CFCFFEE0004C148 /* PSTSpashScreenVC.swift */; };
+		178B7DDB1CFD00040004C148 /* PSTWelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178B7DDA1CFD00040004C148 /* PSTWelcomeVC.swift */; };
+		178B7DDD1CFD00270004C148 /* PSTApplicationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178B7DDC1CFD00270004C148 /* PSTApplicationVC.swift */; };
+		178B7DDF1CFD00860004C148 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178B7DDE1CFD00860004C148 /* Extensions.swift */; };
+		178B7DE11CFD040B0004C148 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 178B7DE01CFD040B0004C148 /* CoreLocation.framework */; };
+		178B7DE31CFD06900004C148 /* XCTestCaseExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178B7DE21CFD06900004C148 /* XCTestCaseExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +53,12 @@
 		176E870F1CFCF29200C94849 /* TestExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		176E87131CFCF29200C94849 /* TestExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestExampleUITests.swift; sourceTree = "<group>"; };
 		176E87151CFCF29200C94849 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		178B7DD81CFCFFEE0004C148 /* PSTSpashScreenVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PSTSpashScreenVC.swift; path = "View Contollers/PSTSpashScreenVC.swift"; sourceTree = "<group>"; };
+		178B7DDA1CFD00040004C148 /* PSTWelcomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PSTWelcomeVC.swift; path = "View Contollers/PSTWelcomeVC.swift"; sourceTree = "<group>"; };
+		178B7DDC1CFD00270004C148 /* PSTApplicationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PSTApplicationVC.swift; path = "View Contollers/PSTApplicationVC.swift"; sourceTree = "<group>"; };
+		178B7DDE1CFD00860004C148 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		178B7DE01CFD040B0004C148 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		178B7DE21CFD06900004C148 /* XCTestCaseExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCTestCaseExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				178B7DE11CFD040B0004C148 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +90,7 @@
 		176E86E71CFCF29200C94849 = {
 			isa = PBXGroup;
 			children = (
+				178B7DE01CFD040B0004C148 /* CoreLocation.framework */,
 				176E86F21CFCF29200C94849 /* TestExample */,
 				176E87071CFCF29200C94849 /* TestExampleTests */,
 				176E87121CFCF29200C94849 /* TestExampleUITests */,
@@ -97,6 +111,8 @@
 		176E86F21CFCF29200C94849 /* TestExample */ = {
 			isa = PBXGroup;
 			children = (
+				178B7DDE1CFD00860004C148 /* Extensions.swift */,
+				178B7DD51CFCFF870004C148 /* View Controllers */,
 				176E86F31CFCF29200C94849 /* AppDelegate.swift */,
 				176E86F51CFCF29200C94849 /* ViewController.swift */,
 				176E86F71CFCF29200C94849 /* Main.storyboard */,
@@ -119,10 +135,21 @@
 		176E87121CFCF29200C94849 /* TestExampleUITests */ = {
 			isa = PBXGroup;
 			children = (
+				178B7DE21CFD06900004C148 /* XCTestCaseExtension.swift */,
 				176E87131CFCF29200C94849 /* TestExampleUITests.swift */,
 				176E87151CFCF29200C94849 /* Info.plist */,
 			);
 			path = TestExampleUITests;
+			sourceTree = "<group>";
+		};
+		178B7DD51CFCFF870004C148 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				178B7DD81CFCFFEE0004C148 /* PSTSpashScreenVC.swift */,
+				178B7DDA1CFD00040004C148 /* PSTWelcomeVC.swift */,
+				178B7DDC1CFD00270004C148 /* PSTApplicationVC.swift */,
+			);
+			name = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +220,7 @@
 				TargetAttributes = {
 					176E86EF1CFCF29200C94849 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = TUUBAVQP9G;
 					};
 					176E87031CFCF29200C94849 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -257,6 +285,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				176E86F61CFCF29200C94849 /* ViewController.swift in Sources */,
+				178B7DDF1CFD00860004C148 /* Extensions.swift in Sources */,
+				178B7DDB1CFD00040004C148 /* PSTWelcomeVC.swift in Sources */,
+				178B7DDD1CFD00270004C148 /* PSTApplicationVC.swift in Sources */,
+				178B7DD91CFCFFEE0004C148 /* PSTSpashScreenVC.swift in Sources */,
 				176E86F41CFCF29200C94849 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,6 +305,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				178B7DE31CFD06900004C148 /* XCTestCaseExtension.swift in Sources */,
 				176E87141CFCF29200C94849 /* TestExampleUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -399,6 +432,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = TestExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = rs.pstech.TestExample;
@@ -410,6 +444,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = TestExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = rs.pstech.TestExample;
@@ -482,6 +517,7 @@
 				176E871A1CFCF29200C94849 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		176E871B1CFCF29200C94849 /* Build configuration list for PBXNativeTarget "TestExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +526,7 @@
 				176E871D1CFCF29200C94849 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		176E871E1CFCF29200C94849 /* Build configuration list for PBXNativeTarget "TestExampleUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +535,7 @@
 				176E87201CFCF29200C94849 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

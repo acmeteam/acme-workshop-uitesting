@@ -9,16 +9,15 @@
 import XCTest
 
 class TestExampleUITests: XCTestCase {
-        
+    
+    var app:XCUIApplication!
     override func setUp() {
         super.setUp()
         
         continueAfterFailure = false
 
         
-        let app = XCUIApplication()
-        app.launchArguments += ["UI-TESTING"]
-        app.launchEnvironment["http://plantronics.com/api/masterlist.json"] = "{\"element\": 3 }"
+        app = XCUIApplication()
         app.launch()
 
     }
@@ -28,8 +27,35 @@ class TestExampleUITests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        XCTAssert(true)
+    func testExample()
+    {
+
+        addUIInterruptionMonitorWithDescription("Location Dialog") { (alert) -> Bool in
+            alert.buttons["Allow"].tap()
+            return true
+        }
+      
+       
+        let goNextButton = app.buttons["Go Next"]
+        
+        // 1. in case we always have welcome
+        /*
+        waitForElementToAppear(goNextButton)
+        goNextButton.tap()
+        
+         */
+        
+        // 2. In case welcome is shown only once
+        if waitUntilElementExists( goNextButton , timeout: 5) {
+            goNextButton.tap()
+        }
+ 
+        
+        waitForElementToAppear(app.staticTexts["Cool application"])
+        app.tap()
+        
+        sleep(5)
+        
     }
     
 }

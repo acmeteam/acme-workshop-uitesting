@@ -25,12 +25,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
-        
-        print( "Are we UI unit testing \(UITesting())")
-        print( "Get UI Mock json \(MasterListData())")
-
-        // TODO: print in console NSProcessInfo.processInfo().arguments , NSProcessInfo.processInfo().environment
         return true
+    }
+    
+    class var isFirstTime: Bool
+    {
+        get
+        {
+            if let _ = NSUserDefaults.standardUserDefaults().stringForKey("app_started") {
+                return false
+            }
+            
+            NSUserDefaults.standardUserDefaults().setObject("1", forKey: "app_started")
+            return true;
+            
+        }
     }
 
     func applicationWillResignActive(application: UIApplication) {
