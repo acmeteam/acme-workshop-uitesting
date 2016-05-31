@@ -521,7 +521,8 @@ class ListViewController: UITableViewController, UITextFieldDelegate, ListColorC
         else {
             let listItem = listPresenter.presentedListItems[row - 1]
 
-            listItemCell.checkBox.accessibilityValue = listItem.text
+            listItemCell.checkBox.accessibilityValue = listItem.isComplete ? "1" : "0"
+            listItemCell.checkBox.accessibilityLabel = listItem.text
             listItemCell.isComplete = listItem.isComplete
             listItemCell.textField.text = listItem.text
         }

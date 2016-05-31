@@ -28,7 +28,7 @@ class ListerUITests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
+    func testAddingCookies() {
     
         let app = XCUIApplication()
         let table = app.tables
@@ -39,7 +39,13 @@ class ListerUITests: XCTestCase {
         addItemTestField.typeText("Cookies")
         app.typeText("\r")
         
-        table.buttons["Cookies"].tap()
+        let cookiesButton = table.buttons["Cookies"]
+        
+        
+        XCTAssertEqual(cookiesButton.value as? String, "0")
+        cookiesButton.tap() // po cookiesButton.value, before and after tap.
+        XCTAssertEqual(cookiesButton.value as? String, "1")
+        
         let groceriesNavigatinBar = app.navigationBars.matchingIdentifier("Groceries")
         groceriesNavigatinBar.buttons["Edit"].tap()
         
@@ -49,6 +55,8 @@ class ListerUITests: XCTestCase {
         
         
         groceriesNavigatinBar.buttons["Done"].tap()
+        
+        XCTAssertEqual(cookiesButton.exists, false)
         
     }
     
