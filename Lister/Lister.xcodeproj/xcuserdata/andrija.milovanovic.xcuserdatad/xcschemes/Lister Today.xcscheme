@@ -43,13 +43,23 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "178B7DF51CFD0DCC0004C148"
+               BuildableName = "ListerUITests.xctest"
+               BlueprintName = "ListerUITests"
+               ReferencedContainer = "container:Lister.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "16A9851B1936EEA5007B7F37"
-            BuildableName = "Lister.appex"
-            BlueprintName = "Lister Today"
+            BlueprintIdentifier = "16CBDAA618F6EE3A00233D3C"
+            BuildableName = "Lister.app"
+            BlueprintName = "Lister"
             ReferencedContainer = "container:Lister.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

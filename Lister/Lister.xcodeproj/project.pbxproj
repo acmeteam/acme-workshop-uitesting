@@ -44,6 +44,7 @@
 		16EE5975192019CD0052916A /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16480E2918F866990068456A /* List.swift */; };
 		16EE5976192019D30052916A /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16480E2B18F866A80068456A /* ListItem.swift */; };
 		16EE5977192019DC0052916A /* ListColorUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFC7D9A18FB08C90012B60F /* ListColorUI.swift */; };
+		178B7DF91CFD0DCC0004C148 /* ListerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178B7DF81CFD0DCC0004C148 /* ListerUITests.swift */; };
 		3E197D501B056D740080D039 /* SegueHandlerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E197D4F1B056D740080D039 /* SegueHandlerType.swift */; };
 		3E3D094C19313A8400D21A98 /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3D094A193139BB00D21A98 /* AppConfiguration.swift */; };
 		3E541363198A16F9000DA252 /* ListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E541362198A16F9000DA252 /* ListCoordinator.swift */; };
@@ -83,6 +84,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 16EE5953192016410052916A;
 			remoteInfo = ListerKit;
+		};
+		178B7DFB1CFD0DCC0004C148 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 16CBDA9F18F6EE3A00233D3C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 16CBDAA618F6EE3A00233D3C;
+			remoteInfo = Lister;
 		};
 		3EE9B7451A858A3900D3990F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -315,6 +323,9 @@
 		16EE5954192016410052916A /* ListerKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ListerKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		16EE5957192016430052916A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		16F60C141A854CEA0028B2D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Interface.storyboard; sourceTree = "<group>"; };
+		178B7DF61CFD0DCC0004C148 /* ListerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ListerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		178B7DF81CFD0DCC0004C148 /* ListerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListerUITests.swift; sourceTree = "<group>"; };
+		178B7DFA1CFD0DCC0004C148 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3E028CD41A1693B1004B6F9D /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		3E028CD51A1693B1004B6F9D /* Localizable.stringsdict */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Localizable.stringsdict; sourceTree = "<group>"; };
 		3E13050E1A0437120079EB80 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -382,6 +393,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		16EE5950192016410052916A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		178B7DF31CFD0DCC0004C148 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -618,6 +636,7 @@
 				3E497FC718FAFA2400B32837 /* Lister OS X App */,
 				1674D9AB18F7299E0019FF77 /* Shared ListerKit Framework Code */,
 				3E6F0E46198C8663009A4CBB /* Shared Lister Resources */,
+				178B7DF71CFD0DCC0004C148 /* ListerUITests */,
 				1603123419DA00590011D42B /* Frameworks */,
 				16CBDAA818F6EE3A00233D3C /* Products */,
 			);
@@ -629,6 +648,7 @@
 				16CBDAA718F6EE3A00233D3C /* Lister.app */,
 				16EE5954192016410052916A /* ListerKit.framework */,
 				16A9851C1936EEA5007B7F37 /* Lister.appex */,
+				178B7DF61CFD0DCC0004C148 /* ListerUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -912,6 +932,15 @@
 				1603124319DA00590011D42B /* Supporting Files */,
 			);
 			path = "Lister WatchKit App";
+			sourceTree = "<group>";
+		};
+		178B7DF71CFD0DCC0004C148 /* ListerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				178B7DF81CFD0DCC0004C148 /* ListerUITests.swift */,
+				178B7DFA1CFD0DCC0004C148 /* Info.plist */,
+			);
+			path = ListerUITests;
 			sourceTree = "<group>";
 		};
 		3E197D4E1B056CC80080D039 /* Application Helper Types */ = {
@@ -1309,12 +1338,31 @@
 			productReference = 16EE5954192016410052916A /* ListerKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		178B7DF51CFD0DCC0004C148 /* ListerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 178B7DFF1CFD0DCC0004C148 /* Build configuration list for PBXNativeTarget "ListerUITests" */;
+			buildPhases = (
+				178B7DF21CFD0DCC0004C148 /* Sources */,
+				178B7DF31CFD0DCC0004C148 /* Frameworks */,
+				178B7DF41CFD0DCC0004C148 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				178B7DFC1CFD0DCC0004C148 /* PBXTargetDependency */,
+			);
+			name = ListerUITests;
+			productName = ListerUITests;
+			productReference = 178B7DF61CFD0DCC0004C148 /* ListerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		16CBDA9F18F6EE3A00233D3C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Apple Inc.";
 				TargetAttributes = {
@@ -1343,6 +1391,10 @@
 					16EE5953192016410052916A = {
 						CreatedOnToolsVersion = 6.0;
 					};
+					178B7DF51CFD0DCC0004C148 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 16CBDAA618F6EE3A00233D3C;
+					};
 				};
 			};
 			buildConfigurationList = 16CBDAA218F6EE3A00233D3C /* Build configuration list for PBXProject "Lister" */;
@@ -1361,6 +1413,7 @@
 				16CBDAA618F6EE3A00233D3C /* Lister */,
 				16A9851B1936EEA5007B7F37 /* Lister Today */,
 				16EE5953192016410052916A /* ListerKit */,
+				178B7DF51CFD0DCC0004C148 /* ListerUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -1391,6 +1444,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		16EE5952192016410052916A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		178B7DF41CFD0DCC0004C148 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1452,6 +1512,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		178B7DF21CFD0DCC0004C148 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				178B7DF91CFD0DCC0004C148 /* ListerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -1474,6 +1542,11 @@
 			isa = PBXTargetDependency;
 			target = 16EE5953192016410052916A /* ListerKit */;
 			targetProxy = 16EE596B192016430052916A /* PBXContainerItemProxy */;
+		};
+		178B7DFC1CFD0DCC0004C148 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 16CBDAA618F6EE3A00233D3C /* Lister */;
+			targetProxy = 178B7DFB1CFD0DCC0004C148 /* PBXContainerItemProxy */;
 		};
 		3EE9B7461A858A3900D3990F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1744,6 +1817,42 @@
 			};
 			name = Release;
 		};
+		178B7DFD1CFD0DCC0004C148 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = ListerUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = rs.pstech.ListerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Lister;
+			};
+			name = Debug;
+		};
+		178B7DFE1CFD0DCC0004C148 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = ListerUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = rs.pstech.ListerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Lister;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1782,6 +1891,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		178B7DFF1CFD0DCC0004C148 /* Build configuration list for PBXNativeTarget "ListerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				178B7DFD1CFD0DCC0004C148 /* Debug */,
+				178B7DFE1CFD0DCC0004C148 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

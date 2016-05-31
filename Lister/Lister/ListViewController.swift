@@ -504,6 +504,7 @@ class ListViewController: UITableViewController, UITextFieldDelegate, ListColorC
     func configureListItemCell(listItemCell: ListItemCell, forRow row: Int) {
         listItemCell.checkBox.isChecked = false
         listItemCell.checkBox.hidden = false
+        
 
         listItemCell.textField.font = UIFont.preferredFontForTextStyle(UIFontTextStyleBody)
         listItemCell.textField.delegate = self
@@ -513,12 +514,14 @@ class ListViewController: UITableViewController, UITextFieldDelegate, ListColorC
         if row == 0 {
             // Configure an "Add Item" list item cell.
             listItemCell.textField.placeholder = NSLocalizedString("Add Item", comment: "")
+            listItemCell.textField.autocorrectionType = .No
             listItemCell.textField.text = ""
             listItemCell.checkBox.hidden = true
         }
         else {
             let listItem = listPresenter.presentedListItems[row - 1]
 
+            listItemCell.checkBox.accessibilityValue = listItem.text
             listItemCell.isComplete = listItem.isComplete
             listItemCell.textField.text = listItem.text
         }

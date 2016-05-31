@@ -27,6 +27,10 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WsM-3N-Zc2" customClass="CheckBox" customModule="ListerKit">
                                             <rect key="frame" x="12" y="8" width="27" height="27"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <accessibility key="accessibilityConfiguration">
+                                                <accessibilityTraits key="traits" button="YES"/>
+                                                <bool key="isElement" value="YES"/>
+                                            </accessibility>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="WsM-3N-Zc2" secondAttribute="height" multiplier="1:1" id="VTd-mp-Kmn"/>
                                                 <constraint firstAttribute="width" constant="27" id="yGe-ng-fvQ"/>
@@ -276,7 +280,7 @@
                                     <constraint firstAttribute="height" constant="30" id="kRw-8w-9AB"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done"/>
                                 <connections>
                                     <outlet property="delegate" destination="A6c-cj-pOH" id="Sa3-nO-5G4"/>
                                 </connections>
