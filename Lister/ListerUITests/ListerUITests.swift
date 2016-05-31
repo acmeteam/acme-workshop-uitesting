@@ -27,7 +27,9 @@ class ListerUITests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
-    
+    /**
+     Test adding, selecting and removing
+     */
     func testAddingCookies() {
     
         let app = XCUIApplication()
@@ -58,6 +60,35 @@ class ListerUITests: XCTestCase {
         
         XCTAssertEqual(cookiesButton.exists, false)
         
+    }
+    /**
+     Test adding two same items
+     */
+    func testAddTwoCookies() {
+        
+        let app = XCUIApplication()
+        let table = app.tables
+        table.staticTexts["Groceries"].tap()
+        
+        let addItemTestField = table.textFields["Add Item"]
+        addItemTestField.tap()
+        addItemTestField.typeText("Cookies")
+        app.typeText("\r")
+        
+        let cookiesButton = table.buttons["Cookies"]
+        
+        
+        XCTAssertEqual(cookiesButton.value as? String, "0")
+        cookiesButton.tap() // po cookiesButton.value, before and after tap.
+        XCTAssertEqual(cookiesButton.value as? String, "1")
+        
+        
+        addItemTestField.tap()
+        addItemTestField.typeText("Cookies")
+        app.typeText("\r")
+        XCTAssertEqual(cookiesButton.value as? String, "0") // This will fail. Expected ?!
+        cookiesButton.tap() // po cookiesButton.value, before and after tap.
+        XCTAssertEqual(cookiesButton.value as? String, "1")
     }
     
 }
