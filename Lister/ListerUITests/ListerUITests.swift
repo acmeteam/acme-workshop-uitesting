@@ -107,5 +107,21 @@ class ListerUITests: XCTestCase {
             XCTAssertEqual(table.cells.count, count-1)
         }
     }
-    
+    func testColorClick() {
+        
+        let app = XCUIApplication()
+        let tablesQuery = app.tables
+        tablesQuery.staticTexts["Groceries"].tap()
+        
+        let groceriesNavigationBarsQuery = app.navigationBars.matchingIdentifier("Groceries")
+        groceriesNavigationBarsQuery.buttons["Edit"].tap()
+        tablesQuery.buttons["red"].tap()
+        tablesQuery.buttons["orange"].tap()
+        tablesQuery.buttons["yellow"].tap()
+        tablesQuery.buttons["green"].tap()
+        tablesQuery.buttons["blue"].tap()
+        tablesQuery.buttons["gray"].tap()
+        groceriesNavigationBarsQuery.buttons["Done"].tap()
+        
+    }
 }
