@@ -93,4 +93,19 @@ class ListerUITests: XCTestCase {
         cookiesButton2.tap() // po cookiesButton.value, before and after tap.
     }
     
+    func testRemoveAllItems() {
+        let app = XCUIApplication()
+        let table = app.tables
+        table.staticTexts["Groceries"].tap()
+        app.navigationBars.matchingIdentifier("Groceries").buttons["Edit"].tap()
+        
+        while table.cells.count > 1 {
+            let count = table.cells.count
+            let cell = table.cells.elementBoundByIndex(1)
+            cell.buttons.matchingPredicate(NSPredicate(format: "label BEGINSWITH 'Delete'")).element.tap()
+            cell.childrenMatchingType(.Button).matchingIdentifier("Delete").elementBoundByIndex(0).tap()
+            XCTAssertEqual(table.cells.count, count-1)
+        }
+    }
+    
 }
